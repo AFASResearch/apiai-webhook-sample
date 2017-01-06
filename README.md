@@ -1,3 +1,11 @@
+# Experiment with conversational interaction with our bot
+
+For this experiment, we are creating an api.ai instance that connects to our physical bot using webhooks.
+The physical bot will connect to this site (hosted in the cloud) using websockets. This website will purely relay
+the call received in the webhook to the websocket.
+
+For now, this is just a fork of:
+
 # Api.ai - sample webhook implementation.
 
 This is a really simple webhook implementation that gets Api.ai classification JSON (i.e. a JSON output of Api.ai /query endpoint) and returns a fulfillment response.
