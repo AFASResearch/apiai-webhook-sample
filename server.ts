@@ -1,6 +1,10 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 
+import { bodyProxy } from './body-proxy';
+
+bodyProxy.log();
+
 const restService = express();
 restService.use(bodyParser.json());
 
