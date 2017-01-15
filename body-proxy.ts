@@ -7,14 +7,18 @@ let onerror = (error: any) => {
 
 export let bodyProxy = {
   initialize: () => {
-    let serviceAccount = process.env.NAI_BODY_KEY;
+    let serviceAccount: any;
+
+    if (process.env.NAI_BODY_KEY) {
+      serviceAccount = JSON.parse(process.env.NAI_BODY_KEY);
+    }
 
     if (!serviceAccount) {
       try {
         // Not in source control
         serviceAccount = require('./nai-body-key.json');
       } catch (e) {
-        console.error('Firebase credentials not configured, please provide firebase service account private key ' +
+        console.error('Firebase credentials are not configured, please provide firebase service account private key ' +
           'in environment variable NAI_BODY_KEY or file ./nai-body-key.json');
         process.exit(1);
       }

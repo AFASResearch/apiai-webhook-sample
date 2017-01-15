@@ -6,12 +6,12 @@ import { configureHook } from './hook';
 
 bodyProxy.initialize();
 
-// const service = express();
-// service.use(bodyParser.json());
+const service = express();
+service.use(bodyParser.json());
 
-//configureHook(service);
+configureHook(service);
 
 let port = (process.env.PORT || 5000);
-// service.listen(port, function () {
-//   console.log(`Server listening on http://localhost:${port}/`);
-// });
+service.listen(port, function () {
+  console.log(`Server listening on http://localhost:${port}/`);
+});
