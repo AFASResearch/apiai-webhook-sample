@@ -11,6 +11,7 @@ ideas:
 - Nai can tell the room temperature
 - Nai flashes an alarm when a build is broken
 - Nai announces a rotating 'dev of the week' every monday (on slack)
+- Nai controls the blinds in the room by broadcasting UDP packages
 - Nai displays the 'dev of the week' using an analog gauge
 - Nai can turn its face in different colors using an RGB led
 - Nai can rotate its head
